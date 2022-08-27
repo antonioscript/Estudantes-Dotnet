@@ -23,10 +23,10 @@ namespace Estudantes_Dotnet.Controllers
             return Ok(estudantes);
         }
 
-        [HttpGet]
-        public ActionResult<List<Estudante>> GetSingle()
+        [HttpGet("{id}")]
+        public ActionResult<List<Estudante>> GetSingle(int id)
         {
-            return Ok(estudantes[0]);
+            return Ok(estudantes.FirstOrDefault(c => c.Id == id));
         }
     }
 }
