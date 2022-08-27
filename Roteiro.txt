@@ -10,3 +10,15 @@ Roteiro das Branchs
 
 *3_POST_Method
 1 - Atualizamos o Método Post
+
+*4_EstudanteService
+1 - Criado a Pasta "Services"
+2 - Dentro da Pasta "Service" uma outra pasta chamada "EstudanteService"
+3 - Dentro da Pasta "EstudanteService" uma interface chamada "IEstudanteService.cs"
+4 - Dentro da Pasta "EstudanteService" uma classe chamada "EstudanteService.cs"
+5 - Pegou os métodos dentro do EstudanteController e substitui no EstudanteService.cs
+6  - Apagou a lista de estudante que tinha no EstudanteController e colou no EstudanteService
+7 - Criado o construtor no EstudanteController e os parâmetros dos serviços dentro
+8 - Dentro de cada método do controller foi invocado os serviços
+9 - Injeção de dependência dentro do Program.cs
+STATUS: Até aqui está funcionando perfeitamente.ro da Pasta "Service" uma outra pasta chamada "EstudanteService"
