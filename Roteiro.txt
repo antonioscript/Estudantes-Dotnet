@@ -1,0 +1,8 @@
+Roteiro das Branchs
+
+*1_First_Steps
+1 - Arquivos Iniciais Criados
+2 - Criei o Modelo Estudantes
+3 - Criei o Enum "NivelGraduacao"
+4 - Criei o Controller "EstudanteController"
+
