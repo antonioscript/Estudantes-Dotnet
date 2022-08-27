@@ -6,4 +6,6 @@ Roteiro das Branchs
 3 - Criei o Enum "NivelGraduacao"
 4 - Criei o Controller "EstudanteController"
 
-*1_Routing
+*2_Routing
+1 - Melhoramos a Função GetSingle
+
