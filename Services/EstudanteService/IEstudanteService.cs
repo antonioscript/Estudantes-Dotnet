@@ -8,12 +8,12 @@ namespace Estudantes_Dotnet.Services.EstudanteService
     public interface IEstudanteService
     {
         //GET - Pegar todos os Estudantes
-        List<Estudante> GetAllEstudantes();
+        Task<List<Estudante>> GetAllEstudantes();
 
         //GET - Pegar o Estudante por Id específico
-        Estudante GetEstudanteById(int id);
+        Task<Estudante> GetEstudanteById(int id);
 
         //POST - Adicionar Estudante
-        List<Estudante> AddEstudante(Estudante newEstudante);
+        Task<List<Estudante>> AddEstudante(Estudante newEstudante);
     }
 }

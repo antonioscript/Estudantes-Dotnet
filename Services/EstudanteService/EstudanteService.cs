@@ -14,18 +14,18 @@ namespace Estudantes_Dotnet.Services.EstudanteService
         };
 
 
-        public List<Estudante> AddEstudante(Estudante newEstudante)
+        public async Task<List<Estudante>> AddEstudante(Estudante newEstudante)
         {
             estudantes.Add(newEstudante);
             return estudantes;
         }
 
-        public List<Estudante> GetAllEstudantes()
+        public async Task<List<Estudante>> GetAllEstudantes()
         {
             return estudantes;
         }
 
-        public Estudante GetEstudanteById(int id)
+        public async Task<Estudante> GetEstudanteById(int id)
         {
             return estudantes.FirstOrDefault(c => c.Id == id);
         }
