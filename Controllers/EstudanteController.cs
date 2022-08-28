@@ -21,21 +21,21 @@ namespace Estudantes_Dotnet.Controllers
 
         //Pegar Todos os estudantes
         [HttpGet("GetAll")]
-        public async Task<ActionResult<List<Estudante>>> Get()
+        public async Task<ActionResult<ServiceResponse<List<Estudante>>>> Get()
         {
             return Ok(await _estudanteService.GetAllEstudantes());
         }
 
         //Pegar Por Id Específico
         [HttpGet("{id}")]
-        public async Task<ActionResult<List<Estudante>>> GetSingle(int id)
+        public async Task<ActionResult<ServiceResponse<List<Estudante>>>> GetSingle(int id)
         {
             return Ok(await _estudanteService.GetEstudanteById(id));
         }
 
         //Método Post
         [HttpPost]
-        public async Task<ActionResult<List<Estudante>>> AddEstudante(Estudante newEstudante)
+        public async Task<ActionResult<ServiceResponse<List<Estudante>>>> AddEstudante(Estudante newEstudante)
         {
             return Ok(await _estudanteService.AddEstudante(newEstudante));
         }

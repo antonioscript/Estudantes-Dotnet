@@ -9,7 +9,7 @@ namespace Estudantes_Dotnet.Models
     {
         public int Id { get; set; }
 
-        public string Nome { get; set; } = "Antônio";
+        public string Nome { get; set; } = "Antôni Rocha";
 
         public int Idade { get; set; } = 25;
 
