@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Estudantes_Dotnet.Models
+namespace Estudantes_Dotnet.Dtos.Estudante
 {
-    public class Estudante
+    public class GetEstudanteDto
     {
+        //Exatamente igual ao Models/Estudante.cs
         public int Id { get; set; }
 
         public string Nome { get; set; } = "Antônio Rocha";

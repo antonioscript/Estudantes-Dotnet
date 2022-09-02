@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Estudantes_Dotnet.Dtos.Estudante;
 
 namespace Estudantes_Dotnet.Services.EstudanteService
 {
@@ -14,23 +15,23 @@ namespace Estudantes_Dotnet.Services.EstudanteService
         };
 
 
-        public async Task<ServiceResponse<List<Estudante>>> AddEstudante(Estudante newEstudante)
+        public async Task<ServiceResponse<List<GetEstudanteDto>>> AddEstudante(AddEstudanteDto newEstudante)
         {
-            var serviceResponse = new ServiceResponse<List<Estudante>>();
+            var serviceResponse = new ServiceResponse<List<GetEstudanteDto>>();
             estudantes.Add(newEstudante);
             
             serviceResponse.Data = estudantes;
             return serviceResponse;
         }
 
-        public async Task<ServiceResponse<List<Estudante>>> GetAllEstudantes()
+        public async Task<ServiceResponse<List<GetEstudanteDto>>> GetAllEstudantes()
         {
-            return new ServiceResponse<List<Estudante>> { Data = estudantes };
+            return new ServiceResponse<List<GetEstudanteDto>> { Data = estudantes };
         }
 
-        public async Task<ServiceResponse<Estudante>> GetEstudanteById(int id)
+        public async Task<ServiceResponse<GetEstudanteDto>> GetEstudanteById(int id)
         {
-            var serviceResponse = new ServiceResponse<Estudante>();
+            var serviceResponse = new ServiceResponse<GetEstudanteDto>();
             var estudante = estudantes.FirstOrDefault(c => c.Id == id);
             serviceResponse.Data = estudante;
             return serviceResponse;
