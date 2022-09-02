@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\Estudantes-Dotnet.csproj": {}
+    "c:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\Estudantes-Dotnet.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\Estudantes-Dotnet.csproj": {
+    "c:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\Estudantes-Dotnet.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\Estudantes-Dotnet.csproj",
+        "projectUniqueName": "c:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\Estudantes-Dotnet.csproj",
         "projectName": "Estudantes-Dotnet",
-        "projectPath": "C:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\Estudantes-Dotnet.csproj",
+        "projectPath": "c:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\Estudantes-Dotnet.csproj",
         "packagesPath": "C:\\Users\\Antônio Jr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\obj\\",
+        "outputPath": "c:\\Users\\Antônio Jr\\Projects\\Estudantes-Dotnet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Antônio Jr\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
