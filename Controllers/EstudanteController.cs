@@ -40,5 +40,17 @@ namespace Estudantes_Dotnet.Controllers
         {
             return Ok(await _estudanteService.AddEstudante(newEstudante));
         }
+
+        //Método Put
+        [HttpPut]
+        public async Task<ActionResult<ServiceResponse<GetEstudanteDto>>> UpdateEstudante(UpdateEstudanteDto updateEstudante)
+        {
+            var response = await _estudanteService.UpdateEstudante(updateEstudante);
+            if(response.Data == null)
+            {
+                return NotFound(response);
+            }
+            return Ok(response);
+        }
     }
 }

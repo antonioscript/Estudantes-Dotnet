@@ -12,7 +12,7 @@ namespace Estudantes_Dotnet.Services.EstudanteService
         private static List<Estudante> estudantes = new List<Estudante>()
         {
             new Estudante(),
-            new Estudante {Id = 1, Nome = "Catarina"}
+            new Estudante {Id = 1, Nome = "Catarina", Idade = 23, Curso = "Análise e Desenvolvimento de Sistemas"}
         };
 
         private readonly IMapper _mapper;
@@ -46,6 +46,29 @@ namespace Estudantes_Dotnet.Services.EstudanteService
             var estudante = estudantes.FirstOrDefault(c => c.Id == id);
             serviceResponse.Data = _mapper.Map<GetEstudanteDto>(estudante);
             return serviceResponse;
+        }
+
+        public Task<ServiceResponse<GetEstudanteDto>> UpdateEstudante(UpdateEstudanteDto updateEstudante)
+        {
+            ServiceResponse<GetEstudanteDto> response = new ServiceResponse<GetEstudanteDto>();
+
+            try 
+            {
+                Estudante estudante = estudantes.FirstOrDefault(c => c.Id == updateEstudante.Id);
+
+                estudante.Nome = updateEstudante.Nome;
+                estudante.Idade = updateEstudante.Idade;
+                estudante.Curso = updateEstudante.Curso;
+                estudante.Nivel = updateEstudante.Nivel;
+
+                response.Data = _mapper.Map<GetEstudanteDto>(estudante);
+            }
+            catch (Exception ex)
+            {
+                response.Success = false;
+                response.Message = ex.Message;
+            }
+            return response;
         }
     }
 }

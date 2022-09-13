@@ -16,5 +16,8 @@ namespace Estudantes_Dotnet.Services.EstudanteService
 
         //POST - Adicionar Estudante
         Task<ServiceResponse<List<GetEstudanteDto>>> AddEstudante(AddEstudanteDto newEstudante);
+
+        //PUT - Atualizar Estudante
+        Task<ServiceResponse<GetEstudanteDto>> UpdateEstudante(UpdateEstudanteDto updateEstudante);
     }
 }
